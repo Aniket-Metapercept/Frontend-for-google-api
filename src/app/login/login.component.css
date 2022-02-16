@@ -1,0 +1,19 @@
+.cont{
+  /* padding-top: 55px; */
+  /* padding-left:455px ; */
+  /* display: flex;
+  justify-content: center; */
+  display: flex;
+  flex-direction: column;
+  width: 291px;
+  justify-content: center;
+  padding-left: 35px;
+  padding-top: 35px;
+}
+
+button{
+  /* width: 330px;
+  margin: 55px; */
+  justify-content: center;
+
+}
