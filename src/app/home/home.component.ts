@@ -25,15 +25,21 @@ export class HomeComponent implements OnInit {
 
       if(data){
         this.show = true
-        this.msg = "Data added To Calender"
+        this.msg = data
       } else {
         this.show = true
-        this.msg = "Data not added To Calender"
+        this.msg = data
       }
     })
 
   };
 
+  eventData:any
+  getAllEvent(){
+    this.googleService.getData().subscribe(data=>{
+      this.eventData = data
+    })
+  }
 
   ngOnInit(): void {
 

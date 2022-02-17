@@ -23,3 +23,20 @@
     <button type="submit" [disabled]="!formValue.valid" >Submit</button>
   </form>
 </div>
+
+<br><br><br>
+
+
+<button (click)="getAllEvent()" >Get All Data</button>
+
+
+<br><br><br>
+
+<div *ngIf="eventData">
+
+  <div *ngFor="let i of eventData" >
+    {{i}}
+  </div>
+
+</div>
+
