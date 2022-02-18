@@ -1,0 +1,28 @@
+<p>event works!</p>
+
+<br>
+<div class="" *ngIf="eventdata">
+
+<h1>You Can Update Values</h1>
+
+
+<h1 style="color:red" *ngIf="msg">{{msg}}</h1>
+  <form>
+
+    <form  [formGroup]="formValue" (ngSubmit)="onSubmit()" >
+      <input type="text" name="" id="" placeholder="summary" formControlName="summary">
+      <input type="text" name="" id="" placeholder="location" formControlName="location">
+      <input type="text" name="" id="" placeholder="description" formControlName="description">
+      <input type="datetime-local" name="" id="" formControlName="from">
+      <input type="datetime-local" name="" id="" formControlName="to">
+      <button type="submit" [disabled]="!formValue.valid" >Update</button>
+    </form>
+  </form>
+
+</div>
+
+
+
+<div class="btn">
+  <button (click)="ondelete()" >Delete</button>
+</div>

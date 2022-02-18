@@ -1,3 +1,4 @@
+import { EventComponent } from './event/event.component';
 import { ActiveGuard } from './active.guard';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:'about',component:AboutComponent,canActivate:[ActiveGuard]},
   {path:'login',component:LoginComponent,},
   {path:'contact',component:ContactComponent,canActivate:[ActiveGuard]},
+  {path:'cal/:id',component:EventComponent,canActivate:[ActiveGuard]},
 ];
 
 @NgModule({

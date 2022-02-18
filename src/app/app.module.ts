@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { ContactComponent } from './contact/contact.component'
 import { ReactiveFormsModule } from '@angular/forms';
+import { EventComponent } from './event/event.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     LoginComponent,
     HeaderComponent,
-    ContactComponent
+    ContactComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,

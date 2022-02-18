@@ -35,8 +35,23 @@
 <div *ngIf="eventData">
 
   <div *ngFor="let i of eventData" >
-    {{i}}
+    <a [routerLink]="['/cal',i.id]">
+
+      <h5>{{i.summary}} &nbsp;&nbsp; {{i.start.dateTime | date:'dd-MM-yyyy hh:mm:ss a':'+0530'}} &nbsp;&nbsp; {{i.end.dateTime | date:'dd-MM-yyyy hh:mm:ss a':'+0530'}} </h5>
+
+    </a>
   </div>
 
 </div>
 
+
+<h1>Want to create New Meeting? <a href=" http://meet.google.com/new" target="_blank">Click here</a></h1>
+
+<br>
+<div>
+  <form  [formGroup]="formValue2" (ngSubmit)="onSubmit2()" >
+    <input type="text" name="" id="" placeholder="code" formControlName="code">
+
+    <button type="submit" [disabled]="!formValue2.valid" >Join</button>
+  </form>
+</div>

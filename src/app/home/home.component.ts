@@ -11,6 +11,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 export class HomeComponent implements OnInit {
   data !:any
   formValue !: FormGroup
+  formValue2 !: FormGroup
   show!:Boolean
   msg:any
 
@@ -41,6 +42,11 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  onSubmit2(){
+    console.log(this.formValue2.value)
+    window.open('https://meet.google.com/'+this.formValue2.value.code,"_blank")
+  }
+
   ngOnInit(): void {
 
     this.formValue = this.fb.group({
@@ -50,6 +56,10 @@ export class HomeComponent implements OnInit {
       from: new FormControl('',[Validators.required]),
       to: new FormControl('',[Validators.required]),
 
+    })
+
+    this.formValue2 = this.fb.group({
+      code : new FormControl('',[Validators.required])
     })
 
     fetch("http://localhost:3000/auth/login/success", {
