@@ -58,6 +58,7 @@ export class EventComponent implements OnInit {
 
   ondelete(){
     this.googleapi.delete(this.id).subscribe(data=>{
+      console.log(data)
       alert(data)
       this.r1.navigate(['/home'])
     })
