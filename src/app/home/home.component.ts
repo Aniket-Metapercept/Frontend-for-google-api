@@ -24,13 +24,7 @@ export class HomeComponent implements OnInit {
     this.googleService.addEventInCalender(data).subscribe(data=>{
       console.log(data)
 
-      if(data){
-        this.show = true
-        this.msg = data
-      } else {
-        this.show = true
-        this.msg = data
-      }
+      this.getAllEvent()
     })
 
   };
@@ -74,7 +68,7 @@ export class HomeComponent implements OnInit {
         .then((resObject) => {
           this.data = resObject.user;
           console.log(this.data)
-          localStorage.setItem('user',this.data.displayName)
+          localStorage.setItem('user',this.data.name)
           localStorage.setItem('token',this.data.token)
           console.log(this.data.token)
           this.service.log = true
