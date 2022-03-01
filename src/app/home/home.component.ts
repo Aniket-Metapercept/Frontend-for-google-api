@@ -70,6 +70,7 @@ export class HomeComponent implements OnInit {
           console.log(this.data)
           localStorage.setItem('user',this.data.name)
           localStorage.setItem('token',this.data.token)
+          localStorage.setItem('userId',this.data.sub)
           console.log(this.data.token)
           this.service.log = true
         })

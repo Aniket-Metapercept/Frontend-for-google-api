@@ -1,0 +1,25 @@
+<p>employeed-detail-form works!</p>
+
+<div class="">
+  <form  [formGroup]="formValue" (ngSubmit)="onSubmit()" >
+    <input type="text" name="" id="" placeholder="date_of_joining" formControlName="date_of_joining">
+    <input type="text" name="" id="" placeholder="designation" formControlName="designation">
+    <input type="text" name="" id="" placeholder="department" formControlName="department">
+    <input type="text" name="" id="" placeholder="salary_breakup" formControlName="salary_breakup">
+    <input type="text" name="" id="" placeholder="previous_job" formControlName="previous_job">
+    <input type="text" name="" id="" placeholder="leave_balance" formControlName="leave_balance">
+    <input type="text" name="" id="" placeholder="reporting_manager" formControlName="reporting_manager">
+    <input type="text" name="" id="" placeholder="apprasial_cycle" formControlName="apprasial_cycle">
+    <input type="text" name="" id="" placeholder="insurance_details" formControlName="insurance_details">
+    <input type="text" name="" id="" placeholder="attendence" formControlName="attendence">
+
+    <button type="submit" [disabled]="!formValue.valid" >Submit</button>
+  </form>
+</div>
+
+<br><br><br>
+<button (click)="details()">Get Professional Details</button>
+<br><br>
+{{professionalDetails | json}}
+<br><br><br>
+<button (click)="ondelete()">Delete Professional Details</button>

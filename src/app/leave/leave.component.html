@@ -1,0 +1,27 @@
+<p>leave works!</p>
+
+<div class="">
+  <form  [formGroup]="formValue" (ngSubmit)="onSubmit()" >
+    <input type="text" name="" id="" placeholder="name" formControlName="name">
+    <input type="text" name="" id="" placeholder="Leave type" formControlName="leave_type">
+    <input type="text" name="" id="" placeholder="start" formControlName="start">
+    <input type="text" name="" id="" placeholder="end" formControlName="end">
+    <input type="text" name="" id="" placeholder="manager" formControlName="manager">
+    <input type="text" name="" id="" placeholder="email" formControlName="email">
+    <input type="text" name="" id="" placeholder="reason" formControlName="reason">
+
+    <button type="submit" [disabled]="!formValue.valid" >Submit</button>
+  </form>
+</div>
+
+
+<br><br><br>
+
+<button (click)="details()">Get All Leave</button>
+<br>
+<!-- {{allData | json}} -->
+
+<div *ngFor="let i of allData">
+  {{i.name}} -- {{i.reason}} -- {{i.start}} -- {{i.end}} {{i.status}}<button *ngIf="i.status != 'approved'" (click)="approve(i.id)" >approve</button>
+  <br>
+</div>

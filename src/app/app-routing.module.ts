@@ -1,3 +1,5 @@
+import { ApprasialComponent } from './apprasial/apprasial.component';
+import { LeaveComponent } from './leave/leave.component';
 import { EventComponent } from './event/event.component';
 import { ActiveGuard } from './active.guard';
 import { ContactComponent } from './contact/contact.component';
@@ -13,6 +15,8 @@ const routes: Routes = [
   {path:'home',component:HomeComponent,},
   {path:'about',component:AboutComponent,canActivate:[ActiveGuard]},
   {path:'login',component:LoginComponent,},
+  {path:'leave',component:LeaveComponent,},
+  {path:'apprasial',component:ApprasialComponent,},
   {path:'contact',component:ContactComponent,canActivate:[ActiveGuard]},
   {path:'cal/:id',component:EventComponent,canActivate:[ActiveGuard]},
 ];

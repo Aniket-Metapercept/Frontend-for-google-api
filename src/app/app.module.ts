@@ -13,6 +13,9 @@ import { HeaderComponent } from './header/header.component';
 import { ContactComponent } from './contact/contact.component'
 import { ReactiveFormsModule } from '@angular/forms';
 import { EventComponent } from './event/event.component';
+import { EmployeedDetailFormComponent } from './employeed-detail-form/employeed-detail-form.component';
+import { LeaveComponent } from './leave/leave.component';
+import { ApprasialComponent } from './apprasial/apprasial.component';
 
 
 @NgModule({
@@ -23,7 +26,10 @@ import { EventComponent } from './event/event.component';
     LoginComponent,
     HeaderComponent,
     ContactComponent,
-    EventComponent
+    EventComponent,
+    EmployeedDetailFormComponent,
+    LeaveComponent,
+    ApprasialComponent
   ],
   imports: [
     BrowserModule,
